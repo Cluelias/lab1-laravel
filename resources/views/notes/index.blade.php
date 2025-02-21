@@ -20,6 +20,7 @@
                     <th width="80px">No</th>
                     <th>Title</th>
                     <th>content</th>
+                    <th>subject</th>
                     <th width="250px">Action</th>
                 </tr>
             </thead>
@@ -30,6 +31,7 @@
                         <td>{{ ++$i }}</td>
                         <td>{{ $note->title }}</td>
                         <td>{{ $note->content }}</td>
+                        <td>{{ $note->subject }}</td>
                         <td>
                             <form action="{{ route('notes.destroy',$note->id) }}" method="POST">
                                 <a class="btn btn-info btn-sm" href="{{ route('notes.show',$note->id) }}"><i class="fa-solid fa-list"></i> Show</a>
